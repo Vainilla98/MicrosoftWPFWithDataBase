@@ -1,0 +1,39 @@
+﻿<Window x:Class="DI_UT1_Ej24_MySQL_ContexMenu_Settings.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DI_UT1_Ej24_MySQL_ContexMenu_Settings"
+        mc:Ignorable="d"
+        Title="Ejemplo 24 - MySQL, ContextMenu y Settings" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lbl_contiente" Content="Contiente: " HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16"/>
+            <ComboBox x:Name="cmb_continente" Grid.Column="1" VerticalAlignment="Center" Margin="5,0,5,0" FontSize="16" SelectionChanged="cmb_continente_SelectionChanged"/>
+            <Label x:Name="lbl_pais" Grid.Column="2" Content="Pais: " HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16"/>
+            <ComboBox x:Name="cmb_pais" Grid.Column="3" VerticalAlignment="Center" Margin="5,0,5,0" FontSize="16" />
+            <Button x:Name="btn_buscar" Grid.Column="4" Content="Buscar" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="40" FontSize="16" FontFamily="Imprint MT Shadow" Click="btn_buscar_Click"/>
+            <Button x:Name="btn_annadir" Grid.Column="5" Content="Añadir" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="40" FontSize="16" FontFamily="Imprint MT Shadow" Click="btn_annadir_Click"/>
+        </Grid>
+        <DataGrid x:Name="dtg_Ciudad" Grid.Row="1" Margin="20" CanUserAddRows="False" IsReadOnly="True" SelectionMode="Single" ColumnWidth="*">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="mnu_Annadir" Header="Annadir" Click="btn_annadir_Click"/>
+                    <MenuItem x:Name="mnu_Eliminar" Header="Eliminar" Click="mnu_Eliminar_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+    </Grid>
+</Window>

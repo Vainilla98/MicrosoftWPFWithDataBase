@@ -1,0 +1,32 @@
+﻿<Window x:Class="DI_UT1_Ej24_MySQL_ContexMenu_Settings.AnnadirCiudadWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DI_UT1_Ej24_MySQL_ContexMenu_Settings"
+        mc:Ignorable="d"
+        Title="Añadir Ciudad" Height="377" Width="451">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label x:Name="lbl_Nombre" Content="Nombre:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20"/>
+        <TextBox x:Name="txb_nombre" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0" FontSize="16"/>
+        <Label x:Name="lbl_coidgo" Content="Codigo Pais:" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20"/>
+        <TextBox x:Name="txb_codigo" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0" FontSize="16"/>
+        <Label x:Name="lbl_distrito" Content="Región:" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20"/>
+        <TextBox x:Name="txb_distrito" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0" FontSize="16"/>
+        <Label x:Name="lbl_poblacion" Content="Población:" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20"/>
+        <TextBox x:Name="txb_poblacion" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0" FontSize="16"/>
+        <Button x:Name="btn_aceptar" Content="Aceptar" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="40" FontFamily="Cooper Black" FontSize="16" Click="btn_aceptar_Click"/>
+        <Button x:Name="btn_cancelar" Content="Cancelar" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="40" FontFamily="Cooper Black" FontSize="16" Click="btn_cancelar_Click"/>
+    </Grid>
+</Window>
